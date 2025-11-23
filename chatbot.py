@@ -13,7 +13,7 @@ def chatbot():
 
     # Réponses automatiques simples
     if "dynamic" in message or "prix" in message:
-        reply = "Le prix de Boissons Dynamic est : 2.5€ l'unité, 24€ le carton."
+        reply = "Le prix de Boissons Dynamic est : 3150Ar l'unité, 75600Ar le carton (24 untés)."
     elif "commandé" in message or "commande" in message:
         return jsonify({"replyType": "commande"})
     elif "bonjour" in message or "salut" in message:
