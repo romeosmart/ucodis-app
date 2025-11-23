@@ -4,7 +4,7 @@
   "description": "This Ucodis app is for his client!",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "roméosmart",
   "license": "ISC",
