@@ -1,0 +1,105 @@
+<!-- about.ejs -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ucodis</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="images/logo_short.jpg" />
+  </head>
+  <body>
+    <%- include('partials/logo') %> <%- include('partials/navbar', { page:
+    'commande' }) %>
+
+    <main class="main-content">
+      <!-- Hero / Intro Commande -->
+      <section class="commande-hero reveal">
+        <div class="commande-hero-content">
+          <h1>Passer une commande</h1>
+          <p>
+            Commandez vos produits préférés facilement et rapidement via notre
+            formulaire. Remplissez toutes les informations et notre équipe vous
+            contactera pour confirmer votre commande.
+          </p>
+        </div>
+      </section>
+
+      <!-- Formulaire de commande -->
+      <section class="commande-form reveal">
+        <h2>Formulaire de commande</h2>
+        <form action="/commande" method="POST">
+          <label for="product">Produit</label>
+          <select name="product" id="product" required>
+            <option value="">-- Sélectionnez un produit --</option>
+            <option value="dynamic">Boissons Dynamic</option>
+          </select>
+
+          <label for="quantity">Quantité</label>
+          <input
+            type="number"
+            name="quantity"
+            id="quantity"
+            min="1"
+            placeholder="Entrez la quantité"
+            required
+          />
+
+          <label for="name">Nom complet</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Votre nom"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Votre email"
+            required
+          />
+
+          <label for="phone">Téléphone</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Votre téléphone"
+            required
+          />
+
+          <label for="message">Message / Remarques</label>
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            placeholder="Message ou instructions spéciales"
+          ></textarea>
+
+          <button type="submit">Envoyer la commande</button>
+        </form>
+      </section>
+      <!-- Modal de confirmation -->
+      <% if (success) { %>
+      <div id="modal" class="modal show">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-icon">✅</div>
+          <h2>Commande réussie !</h2>
+          <p>
+            Merci <strong><%= name %></strong> ! Votre commande a été bien
+            envoyée. Nous vous contacterons bientôt pour confirmation.
+          </p>
+        </div>
+      </div>
+      <% } %>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/reveal.js"></script>
+    <script src="/js/modal.js"></script>
+  </body>
+</html>

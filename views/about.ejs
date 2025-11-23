@@ -1,0 +1,69 @@
+<!-- about.ejs -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ucodis</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="images/logo_short.jpg" />
+  </head>
+
+  <body>
+    <%- include('partials/logo') %> <%- include('partials/navbar', { page:
+    'about' }) %>
+
+    <main class="main-content">
+      <!-- Hero / Intro -->
+      <section class="about-hero reveal">
+        <div class="about-hero-content">
+          <h1>À propos de Ucodis</h1>
+          <p>
+            Ucodis est le leader de la distribution de produits internationaux
+            et nationaux à Madagascar, développé par l’Union Commerciale de
+            Distribution. Nous mettons un point d’honneur à offrir une sélection
+            variée de produits de qualité, adaptés aux besoins des foyers et des
+            commerces.
+          </p>
+        </div>
+      </section>
+
+      <!-- Mission, Vision, Valeurs -->
+      <section class="about-mission reveal">
+        <h2>Notre Mission</h2>
+        <p>
+          Fournir des produits fiables et de qualité aux foyers et commerces
+          malgaches, tout en valorisant les producteurs locaux et les meilleures
+          marques internationales.
+        </p>
+
+        <h2>Notre Vision</h2>
+        <p>
+          Être l’entreprise de distribution la plus fiable et innovante de
+          Madagascar, offrant des solutions logistiques performantes et un
+          service client irréprochable.
+        </p>
+
+        <h2>Nos Valeurs</h2>
+        <p>
+          Qualité, Fiabilité, Transparence et Respect des producteurs locaux et
+          de nos clients.
+        </p>
+      </section>
+
+      <!-- Histoire de l'entreprise -->
+      <section class="about-history reveal">
+        <h2>Notre Histoire</h2>
+        <p>
+          Fondée par l’Union Commerciale de Distribution, Ucodis a commencé
+          comme une petite entreprise locale, visant à distribuer des produits
+          essentiels à Madagascar. Avec le temps, nous avons étendu notre
+          réseau, collaboré avec des marques internationales et locales, et nous
+          sommes devenus un acteur majeur de la distribution dans le pays.
+        </p>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/reveal.js"></script>
+  </body>
+</html>

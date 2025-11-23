@@ -1,0 +1,18 @@
+{
+  "name": "ucodis_app",
+  "version": "1.0.0",
+  "description": "This Ucodis app is for his client!",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "roméosmart",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

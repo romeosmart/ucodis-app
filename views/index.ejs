@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ucodis</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="images/logo_short.jpg" />
+  </head>
+
+  <body>
+    <div class="logo">
+      <img src="images/logo_long.jpg" alt="logo long" />
+    </div>
+
+    <%- include('partials/navbar', { page: 'home' }) %>
+
+    <main class="main-content">
+      <!-- HERO -->
+      <section class="hero reveal">
+        <div class="hero-content">
+          <h1>Découvrez Ucodis</h1>
+          <p>
+            Ucodis est le leader de la distribution de produits internationaux
+            et nationaux à Madagascar, développé par l’Union Commerciale de
+            Distribution.
+          </p>
+          <p>
+            Nous proposons une large gamme de produits de qualité comme le
+            <strong>Boissons Dynamic</strong> et de nombreux produits malgaches
+            authentiques.
+          </p>
+          <p>
+            Notre mission : apporter des produits fiables et de qualité aux
+            foyers et commerces malgaches, tout en valorisant les producteurs
+            locaux et les meilleures marques internationales.
+          </p>
+          <a href="#products" class="hero-btn">Voir nos produits</a>
+        </div>
+      </section>
+
+      <!-- PRODUITS -->
+      <section class="products reveal" id="products">
+        <h2>Nos Produits</h2>
+        <div class="product-list">
+          <div class="product-card reveal">
+            <img src="/images/dynamic.jpg" alt="Boissons Dynamic" />
+            <h3>Boissons Dynamic</h3>
+            <p>
+              Des boissons rafraîchissantes et énergétiques pour toute la
+              famille.
+            </p>
+            <a href="/commande" class="btn-order">Commander</a>
+          </div>
+          <div class="product-card reveal">
+            <img src="/images/dynamic.jpg" alt="Boissons Dynamic" />
+            <h3>Boissons Dynamic</h3>
+            <p>
+              Des boissons rafraîchissantes et énergétiques pour toute la
+              famille.
+            </p>
+            <a href="/commande" class="btn-order">Commander</a>
+          </div>
+          <div class="product-card reveal">
+            <img src="/images/dynamic.jpg" alt="Boissons Dynamic" />
+            <h3>Boissons Dynamic</h3>
+            <p>
+              Des boissons rafraîchissantes et énergétiques pour toute la
+              famille.
+            </p>
+            <a href="/commande" class="btn-order">Commander</a>
+          </div>
+
+          <div class="product-card reveal">
+            <img src="/images/produits_malagasy.jpg" alt="Produits Malagasy" />
+            <h3>Produits Malagasy</h3>
+            <p>
+              Découvrez le meilleur des produits locaux, issus de Madagascar.
+            </p>
+            <a href="https://moramoravenue.com/" class="btn-order">Voir plus</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MISSION -->
+      <section class="mission reveal">
+        <h2>Notre Mission</h2>
+        <p>
+          Fournir des produits de qualité aux foyers et commerces malgaches,
+          tout en valorisant les produits locaux et les meilleures marques
+          internationales.
+        </p>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <!-- Script pour l'effet reveal -->
+    <script src="/js/reveal.js"></script>
+
+    <!-- Le html du chat -->
+    <%- include('partials/chatbox') %>
+    <script src="/js/help.js"></script>
+  </body>
+</html>

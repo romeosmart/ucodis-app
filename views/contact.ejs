@@ -1,0 +1,63 @@
+<!-- about.ejs -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ucodis</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="images/logo_short.jpg" />
+  </head>
+  <body>
+    <%- include('partials/logo') %> <%- include('partials/navbar', { page:
+    'contact' }) %>
+
+    <main class="main-content">
+      <!-- Hero / Intro Contact -->
+      <section class="contact-hero reveal">
+        <div class="contact-hero-content">
+          <h1>Contactez Ucodis</h1>
+          <p>
+            Nous sommes toujours à votre écoute ! Que ce soit pour des
+            questions, des commandes ou des suggestions, n’hésitez pas à nous
+            contacter. Notre équipe se fera un plaisir de vous répondre
+            rapidement.
+          </p>
+        </div>
+      </section>
+
+      <!-- Coordonnées -->
+      <section class="contact-info reveal">
+        <h2>Nos Coordonnées</h2>
+        <p>
+          <strong>Email :</strong>
+          <a href="mailto:contact@ucodis.com">contact@ucodis.com</a>
+        </p>
+        <p>
+          <strong>Téléphone :</strong>
+          <a href="tel:+261332686815">+261 33 26 86 815</a>
+        </p>
+        <p><strong>Adresse :</strong> 3GVC+F45 Antananarivo 101, Madagascar</p>
+      </section>
+
+      <!-- Formulaire de contact -->
+      <section class="contact-form reveal">
+        <h2>Envoyez-nous un message</h2>
+        <form action="/contact" method="POST">
+          <input type="text" name="name" placeholder="Votre nom" required />
+          <input type="email" name="email" placeholder="Votre email" required />
+          <input type="text" name="subject" placeholder="Sujet" required />
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Votre message"
+            required
+          ></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/reveal.js"></script>
+  </body>
+</html>

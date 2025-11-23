@@ -1,0 +1,948 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+/*---------
+     NAVBAR
+------------ */
+.navbar {
+  background: #2a2a2a;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  -webkit-box-shadow: 0px 12px 19px 0px rgba(51, 51, 51, 0.7);
+  box-shadow: 0px 12px 19px 0px rgba(51, 51, 51, 0.4);
+  font-family: "Arial", sans-serif;
+}
+
+.navbar a {
+  color: #e4e4e4;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #254292;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover,
+.navbar .active {
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.navbar .active {
+  background-color: #254292;
+}
+
+/* Responsive : réduit l’espace sur petits écrans */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* --------------
+      FOOTER 
+ ----------------*/
+.footer {
+  background: #2a2a2a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  gap: 30px; /* espace entre les sections */
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 4px solid #254292;
+}
+
+.footer-section {
+  flex: 1 1 250px; /* chaque section prend au moins 250px et grandit */
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  color: #254292;
+  font-size: 18px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #254292;
+}
+
+/* Responsive : empilement sur mobile */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: unset;
+    margin-bottom: 30px;
+  }
+}
+
+/*----------
+    LOGO 
+-------------*/
+.logo {
+  background: #254292;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+h1 {
+  color: #333;
+}
+/* Responsive : les sections s'empilent sur mobile */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+/*--------------
+    ACCEUIL
+-----------------*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(37, 66, 146, 1) 35%,
+    rgba(21, 176, 207, 1) 100%
+  );
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hero strong {
+  color: #ffd700; /* mettre en valeur les produits */
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #254292;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #4e3adf;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero-btn {
+    padding: 10px 25px;
+  }
+}
+
+/* PRODUITS */
+.products {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 20px;
+}
+
+.products h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #254292;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* permet de passer en ligne/colonne sur mobile */
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  width: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 15px 0 10px 0;
+  font-size: 1.3rem;
+  color: #2a2a2a;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  margin: 0 15px 15px 15px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.btn-order {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px 25px;
+  background: #254292;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-order:hover {
+  background: #4e3adf;
+  transform: translateY(-3px);
+}
+
+/* Responsive : Cards passent en colonne sur mobile */
+@media (max-width: 768px) {
+  .product-card {
+    width: 90%;
+  }
+}
+
+/* MISSION */
+.mission {
+  text-align: center;
+  padding: 30px;
+  background: #eee;
+  border-radius: 12px;
+}
+.mission h2 {
+  color: #254292;
+  margin-bottom: 15px;
+}
+
+/* REVEAL EFFECT */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --------
+  A PROPOS
+----------- */
+.about-hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(120deg, #020024, #254292, #15b0cf, #6c5ce7);
+  background-size: 1200% 1200%;
+  animation: gradientMove 20s ease infinite;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sections Mission, Vision, Histoire */
+.about-mission,
+.about-history {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about-mission h2,
+.about-history h2 {
+  color: #6c5ce7;
+  margin-bottom: 15px;
+}
+
+.about-mission p,
+.about-history p {
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+/* Reveal effect */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+  .about-hero p {
+    font-size: 1rem;
+  }
+  .about-mission,
+  .about-history {
+    padding: 15px;
+  }
+}
+/* -------------
+      CONTACT
+----------------*/
+.contact-hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(120deg, #020024, #254292, #15b0cf, #6c5ce7);
+  background-size: 1200% 1200%;
+  animation: gradientMove 20s ease infinite;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-info,
+.contact-form {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h2,
+.contact-form h2 {
+  color: #6c5ce7;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.contact-info a {
+  color: #6c5ce7;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #6c5ce7;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #6c5ce7;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+  background: #4e3adf;
+  transform: translateY(-3px);
+}
+
+/* Reveal effect */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-hero h1 {
+    font-size: 2.2rem;
+  }
+  .contact-hero p {
+    font-size: 1rem;
+  }
+}
+/* -----------
+    COMMANDE
+-------------*/
+.commande-hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(120deg, #020024, #254292, #15b0cf, #6c5ce7);
+  background-size: 1200% 1200%;
+  animation: gradientMove 20s ease infinite;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.commande-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.commande-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.commande-form {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.commande-form h2 {
+  color: #6c5ce7;
+  margin-bottom: 25px;
+}
+
+.commande-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.commande-form input,
+.commande-form select,
+.commande-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s;
+  box-sizing: border-box;
+}
+
+.commande-form input:focus,
+.commande-form select:focus,
+.commande-form textarea:focus {
+  border-color: #6c5ce7;
+  outline: none;
+}
+
+.commande-form button {
+  width: 100%;
+  padding: 12px;
+  background: #6c5ce7;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.commande-form button:hover {
+  background: #4e3adf;
+  transform: translateY(-3px);
+}
+
+/* Reveal effect */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .commande-hero h1 {
+    font-size: 2.2rem;
+  }
+  .commande-hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ---------------------------
+  MODAL DE COMMANDE ENVOYE
+----------------------------*/
+/* Overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.modal.show {
+  display: flex;
+}
+
+/* Contenu */
+.modal-content {
+  position: relative;
+  background-color: #e0f7e9; /* vert clair succès */
+  color: #1e4620;
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: modalAppear 0.5s ease;
+}
+
+@keyframes modalAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Icone success */
+.modal-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+/* Bouton fermer */
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #1e4620;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal .close:hover {
+  color: #6c5ce7;
+}
+
+/* Texte */
+.modal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .modal-content {
+    padding: 20px 15px;
+  }
+
+  .modal h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal p {
+    font-size: 0.95rem;
+  }
+
+  .modal-icon {
+    font-size: 40px;
+  }
+}
+
+/* ---------------------------
+ HELP WIDGET (BOTTOM RIGHT)
+ --------------------------- */
+/* MINI CHAT AMÉLIORÉ */
+.help-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(135deg, #6c5ce7, #1abc9c);
+  color: white;
+  font-size: 28px;
+  padding: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+.help-btn:hover {
+  transform: scale(1.1);
+}
+
+.help-box {
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  width: 380px;
+  max-width: 90%;
+  height: 480px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  display: none;
+  z-index: 1000;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease;
+}
+
+.help-header {
+  background: linear-gradient(135deg, #6c5ce7, #1abc9c);
+  color: white;
+  padding: 14px 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.help-header span {
+  cursor: pointer;
+  font-size: 22px;
+  transition: transform 0.2s;
+}
+.help-header span:hover {
+  transform: rotate(90deg);
+}
+
+.chat-body {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f7f9fc;
+}
+
+.msg.user {
+  align-self: flex-start;
+  background: #ecf0f1;
+  color: #2d3436;
+  padding: 10px 14px;
+  border-radius: 18px 18px 18px 0;
+  max-width: 75%;
+  animation: slideInLeft 0.4s ease;
+}
+
+.msg.auto {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #6c5ce7, #1abc9c);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 18px 18px 0 18px;
+  max-width: 75%;
+  animation: slideInRight 0.4s ease;
+}
+
+.bot-order-btn {
+  background: linear-gradient(135deg, #6c5ce7, #1abc9c);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 6px;
+  transition: transform 0.2s, background 0.3s;
+}
+.bot-order-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #1abc9c, #6c5ce7);
+}
+
+#chatForm {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+#chatMessage {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+}
+#chatMessage:focus {
+  outline: none;
+}
+#chatForm button {
+  border: none;
+  background: linear-gradient(135deg, #6c5ce7, #1abc9c);
+  color: white;
+  padding: 0 18px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+#chatForm button:hover {
+  background: linear-gradient(135deg, #1abc9c, #6c5ce7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Mobile pour le mini-chat */
+@media (max-width: 500px) {
+  .help-box {
+    width: 90%; /* prend presque toute la largeur */
+    height: 60vh; /* 60% de la hauteur de l’écran */
+    right: 5%; /* léger padding sur les côtés */
+    bottom: 70px;
+    border-radius: 12px;
+  }
+
+  .help-btn {
+    bottom: 15px;
+    right: 15px;
+    font-size: 22px;
+    padding: 12px;
+  }
+
+  .chat-body {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .msg.user,
+  .msg.auto {
+    max-width: 80%; /* s’adapte à la largeur mobile */
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  #chatMessage {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #chatForm button {
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
